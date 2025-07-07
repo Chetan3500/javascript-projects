@@ -2,10 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calorie Counter</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <form id="calorie-counter">
+    <label for="budget">Budget</label>
+    <input type="number" min="0" placeholder="Daily calorie budget" name="budget" id="budget" required>
+    <fieldset id="breakfast">
+      <legend>Breakfast</legend>
+      <div class="input-container"></div>
+    </fieldset>
+    <fieldset id="lunch">
+      <legend>Lunch</legend>
+      <div class="input-container"></div>
+    </fieldset>
+    <fieldset id="dinner">
+      <legend>Dinner</legend>
+      <div class="input-container"></div>
+    </fieldset>
+    <fieldset id="snacks">
+      <legend>Snacks</legend>
+      <div class="input-container"></div>
+    </fieldset>
+    <fieldset id="exercise">
+      <legend>Exercise</legend>
+      <div class="input-container"></div>
+    </fieldset>
+  </form>
   <script src="./script.js"></script>
 </body>
 </html>
