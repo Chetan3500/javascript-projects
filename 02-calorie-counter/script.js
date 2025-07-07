@@ -7,3 +7,8 @@ const clearButton = document.getElementById("clear");
 const output = document.getElementById("output");
 // user later in program
 let isError = false;
+// return number without any sign or space
+function cleanInputString(str) {
+  const regex = /[+-\s]/g;
+  return str.replace(regex, '')
+}
