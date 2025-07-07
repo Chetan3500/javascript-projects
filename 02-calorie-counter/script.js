@@ -17,3 +17,20 @@ function isInvalidInput(str) {
   const regex = /\d+e\d+/i;
   return str.match(regex);
 }
+// retrieve the of id.value
+// console.log(entryDropdown.value)
+// add entries to the calorie counter
+function addEntry() {
+  const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
+  // Each entry will have a text input for the entry's name,
+  // and a number input for the calories.
+  // To get a count of the number of entries,
+  // you can query by text inputs.
+  const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+  const HTMLString = `
+  <label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>
+  <input type="text" placeholder="Name" id="${entryDropdown.value}-${entryNumber}-name">
+  <label for="${entryDropdown.value}-${entryNumber}-calories">Entry ${entryNumber} Calories</label>
+  <input type="number" min="0" placeholder="Calories" id="${entryDropdown.value}-${entryNumber}-calories">`;
+  targetInputContainer.innerHTML += HTMLString;
+}
