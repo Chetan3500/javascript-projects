@@ -90,3 +90,4 @@ function getCaloriesFromInputs(list) { // list is NodeList
 }
 
 addEntryButton.addEventListener('click', addEntry);
+calorieCounter.addEventListener('submit', calculateCalories);
