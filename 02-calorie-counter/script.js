@@ -12,3 +12,8 @@ function cleanInputString(str) {
   const regex = /[+-\s]/g;
   return str.replace(regex, '')
 }
+// In HTML, number inputs allow for exponential notation (such as 1e10). You need to filter those out.
+function isInvalidInput(str) {
+  const regex = /\d+e\d+/i;
+  return str.match(regex);
+}
